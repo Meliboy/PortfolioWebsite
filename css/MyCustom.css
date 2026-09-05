@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*      
+use style tag within a head element of html to add inline css    
+   			Page Level
+            * {}
+            Tag Level
+            h2 {}
+            h1, h2 {}
+            Class level
+            .column {} 
+*/
+body {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+h1, h2 {
+	color: var(--bs-info);
+}
+
+li strong {
+	color: var(--bs-secondary);
+}
+
+img {
+	border-radius: 80px;
+}
+
+#introduction h1, h3 {
+	font-style: italic;
+}
+
+nav, footer {
+	background-color: var(--bs-secondary);
+	border-radius: 10px;
+}
+
+header a{
+	margin-left: 12px;
+}
+ 
+header button{
+	margin-right: 12px;
+}

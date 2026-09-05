@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html lang="en"> <!--remember no info goes before this-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="portfolio website">
+        <meta name="author" content="Melvin Joe Vasquez">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/grid.css">
+        <link rel="stylesheet" href="../css/bootstrap-grid.css">
+        <link rel="stylesheet" href="../css/MyCustom.css">
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body class="m-4 bg-dark text-white">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gray">
+                <a class="navbar-brand" href="index.html">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation bar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experience.html">Experience</a>
+                        </li>
+                        <!--Going to make these pages later-->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Me</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="m-4" id="projects">
+                <h2>Projects</h2>
+                <br>
+                <h4>GlucoTrack Enterprise Platform</h4>
+                <h5>Fall 2025</h5>
+                <!--Intro of Exp-->
+                <p> 
+                    During my fall semester, 3rd year, I had the exciting opportunity to travel to Pittsburgh for the first time for the SteelHacks Hackathon.
+                    As a team of 4, we conducted user interviews with a mother who had to navigate life with a daughter who was diagnosed with Type-1 Diabetes. 
+                    Using this as our motivation, we created features including a meal tracker, personal AI agent to assist with non-medical inquiries, and a data-tracking page
+                    that syncs with a user's CGM device; and then, allows the user to view their blood-glucose trends visually.
+                </p>
+                <!--Bullet Points about Exp-->
+                <ul>
+                    <li>Developed a functional health application prototype at SteelHacks, with data-entry logs, and a meal tracker.</li>
+                    <li>
+                        Orchestrated an intelligent AI agent for the prototype using LangChain and the Gemini API, implementing
+                        RAG to answer non-medical user inquiries.
+                    </li>
+                    <li> Scaled the hackathon concept into a technical proposal, system design, and HIPAA-compliant data constraints.</li>
+                    <li>
+                        Designed specifications for an interoperability middleware layer (GlucoBridge) to normalize
+                        gathering data from CGM devices.
+                    </li>
+                </ul>
+                <!--Summary-->
+                <p>
+                    This experience taught me the importance of conducting user interviews with real-possible users
+                    of an application that I want to develop. Seperating features into different pages, and team mates
+                    is a tactic to allow for rapid development which was necessary in real-life engineering scenarios. Ultimately,
+                    I learned that impact which technology can have on improving the medical lives of people and hope to continue 
+                    learn the safegaurds & research which truly allow software applications to improve lives.
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
