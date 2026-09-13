@@ -43,3 +43,14 @@ header a{
 header button{
 	margin-right: 12px;
 }
+
+body {
+	margin: 16px;
+	background-color: var(--bs-dark);
+	color: var(--bs-white);
+}
+
+/* Add padding to the sections for better spacing */
+#introduction, #experience, #projects, #about, #skills, #education {
+	padding: 8px;
+}

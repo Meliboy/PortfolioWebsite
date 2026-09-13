@@ -13,15 +13,15 @@
         <script src="../js/bootstrap.bundle.min.js"></script>
 
     </head>
-    <body class="m-4 bg-dark text-white">
+    <body>
         <!-- Visible content goes here -->
         <header>
+            <!--navbar component from bootstrap, reworked example code I found in the docs to fit my needs-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-gray">
                 <a class="navbar-brand" href="index.html">My Portfolio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation bar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!--navbar component from bootstrap, reworked example code I found in the docs to fit my needs-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
@@ -41,7 +41,7 @@
                 </div>
             </nav>
             <!--grid for my introduction-->
-            <div id="introduction" class="container p-3">
+            <div id="introduction" class="container">
                 <div class="row">
                     <div class="col d-flex justify-content-end">
                         <img width=300 src="../images/my_headshot.png" alt="Melvin Vasquez Headshot">
@@ -58,7 +58,7 @@
         <main>
             <section id="about">
                 <p>
-                    Currently, in my fourth year studying Computer Science & Engineering with a minor in Game Studies 
+                    Currently, in my fourth year studying Computer Science \& Engineering with a minor in Game Studies 
                     and a growing passion for web development and interactive media. Growing up, I was fascinated by animated movies (VFX especially) 
                     and video games like League of Legends. That interest eventually motivated me to pursue Computer Science, where I
                     discovered that software engineering extends far beyond the games and applications I originally imagined. I remain
@@ -88,8 +88,68 @@
                 <h5>B.S. Computer Science & Engineering with a Minor in Game Studies | GPA: 3.8</h5>
                 <h5>August 2023 - May 2027</h5>
             </section>
+             <section id="experience">
+                <h2>Work Experience</h2>
+                <br>
+                <!--perhaps find a way to separate more experiences through some logic, so each experience appears separate and also can be mapped easily when introducing styling-->
+                <h4>Front End Web Development Intern @ Bath & Body Works</h4>
+                <h5>Summer 2026 - present</h5>
+                <!--Intro of Exp-->
+                <p> 
+                    During my internship at Bath \& Body Works, I joined the Customer Team as a Front-End Web Development intern,
+                    contributing to the redesign and development of customer-facing features for the company's e-commerce website.
+                </p>
+                <!--Bullet Points about Exp-->
+                <ul>
+                    <li>Implemented front-end updates for the Love It List, including redesigned buttons and supporting UI components.</li>
+                    <li>Updated the Sign In Modal/Form as part of the website relaunch.</li>
+                    <li>Implemented typography, color, spacing, and other design updates across the Account Dashboard.</li>
+                    <li>Worked with cross-functional teams including QA, UX, Product, and Engineering to refine and review development tickets.</li>
+                    <li>Merged and deployed changes across development and integration branches for testing and review.</li>
+                    <li>Assisted with bug investigation and refinement after identifying a promotional banner rendering issue caused by a width constraint.</li>
+                    <li>Successfully merged multiple tickets into the development environment, contributing to the website relaunch.</li>
+                </ul>
+                <!--Summary-->
+                <p>
+                    This experience gave me hands-on exposure to professional front-end development, collaborative software engineering
+                    workflows, and the process of taking a feature from ticket refinement through implementation, review, testing, and deployment.
+                </p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <br>
+                <h4>GlucoTrack Enterprise Platform</h4>
+                <h5>Fall 2025</h5>
+                <!--Intro of Exp-->
+                <p> 
+                    During my fall semester, 3rd year, I had the exciting opportunity to travel to Pittsburgh for the first time for the SteelHacks Hackathon.
+                    As a team of 4, we conducted user interviews with a mother who had to navigate life with a daughter who was diagnosed with Type-1 Diabetes. 
+                    Using this as our motivation, we created features including a meal tracker, personal AI agent to assist with non-medical inquiries, and a data-tracking page
+                    that syncs with a user's CGM device; and then, allows the user to view their blood-glucose trends visually.
+                </p>
+                <!--Bullet Points about Exp-->
+                <ul>
+                    <li>Developed a functional health application prototype at SteelHacks, with data-entry logs, and a meal tracker.</li>
+                    <li>
+                        Orchestrated an intelligent AI agent for the prototype using LangChain and the Gemini API, implementing
+                        RAG to answer non-medical user inquiries.
+                    </li>
+                    <li> Scaled the hackathon concept into a technical proposal, system design, and HIPAA-compliant data constraints.</li>
+                    <li>
+                        Designed specifications for an interoperability middleware layer (GlucoBridge) to normalize
+                        gathering data from CGM devices.
+                    </li>
+                </ul>
+                <!--Summary-->
+                <p>
+                    This experience taught me the importance of conducting user interviews with real-possible users
+                    of an application that I want to develop. Seperating features into different pages, and team mates
+                    is a tactic to allow for rapid development which was necessary in real-life engineering scenarios. Ultimately,
+                    I learned that impact which technology can have on improving the medical lives of people and hope to continue 
+                    learn the safegaurds & research which truly allow software applications to improve lives.
+                </p>
+            </section>
         </main>
-        <br>
         <footer class="text-center">
             <h2 class="d-flex justify-content-center py-3">Connect With Me!</h2>
             <div class="d-flex justify-content-center gap-3 pb-3">
