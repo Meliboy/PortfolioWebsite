@@ -53,18 +53,15 @@
         <main>
             <section id="about">
                 <!--grid for my introduction-->
-                <div id="introduction" class="container">
-                    <div class="row align-items-center">
-                        <div id="introduction-text" class="col-6 text-start">
-                            <h1 class="display-3">Hello,</h1>
-                            <h3 class="display-5">I'm Melvin Vasquez</h3> 
-                            <br>
-                            <h3 class="display-5">Front End Web Developer</h3>
-                        </div>
-                        <div class="col-6">
-                            <img width="400" src="../images/my_headshot.png" alt="Melvin Vasquez Headshot">
-                        </div>  
+                <div id="introduction">
+                    <div id="introduction-text">
+                        <h1 class="display-3 responsive-display">Hello,</h1>
+                        <h3 class="display-4 responsive-display">I'm Melvin Vasquez</h3> 
+                        <h3 class="display-4 responsive-display">Front End Web Developer</h3>
                     </div>
+                    <div id="introduction-image">
+                        <img src="../images/my_headshot.png" alt="Melvin Vasquez Headshot">
+                    </div>  
                 </div>
                 <p>
                     Currently, in my fourth year studying Computer Science &amp; Engineering with a minor in Game Studies at The Ohio State University.
@@ -79,89 +76,129 @@
             <section id="skills">
                 <h2>Technical Skills</h2>
                 <!--utilized list to showcase my tech stack-->
-                <ul>
-                    <li><strong>Languages:</strong> HTML, CSS, JavaScript, TypeScript, SQL, Python, Java, C#</li>
-                    <li><strong>Frameworks & Libraries:</strong> React, Next.js, Bootstrap, Ruby on Rails, Tailwind CSS, Chakra UI</li>
-                    <li><strong>Testing:</strong> Jest, JUnit</li>
-                    <li><strong>Development:</strong> Git, GitHub, GitLab, VS Code, CI/CD, Salesforce Commerce Cloud</li>
-                    <li><strong>Game Development:</strong> Unity</li>
-                    <li><strong>Design & UX:</strong> Figma, HCI, UX Principles</li>
-                    <li><strong>Collaboration:</strong> Agile, Jira, Notion</li>
-                </ul>
+                <div id="tech-stack" class="row">
+                    <div class="column">
+                        <h4>Languages</h4>
+                        <ul class="list-skills">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Frameworks & Libraries</h4>
+                        <ul class="list-skills">
+                            <li>React</li>
+                            <li>Next.js</li>
+                            <li>Bootstrap</li>
+                            <li>Ruby on Rails</li>
+                            <li>Tailwind CSS</li>
+                            <li>Chakra UI</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Testing & Software</h4>
+                        <ul class="list-skills">
+                            <li>Jest</li>
+                            <li>JUnit</li>
+                            <li>Unity</li>
+                            <li>Figma</li>
+                            <li>Jira</li>
+                            <li>Notion</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Development</h4>
+                        <ul class="list-skills">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>GitLab</li>
+                            <li>VS Code</li>
+                            <li>CI/CD</li>
+                            <li>Salesforce Commerce Cloud</li>
+                            <li>Agile</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <section id="education">
                 <h2>Education</h2>
-                <h4>The Ohio State University</h4>
-                <h5>B.S. Computer Science & Engineering with a Minor in Game Studies | GPA: 3.8</h5>
-                <h5>August 2023 - May 2027</h5>
+                <div id="educ-box" class="row">
+                    <div id="degree-info" class="col-9">
+                        <h4>The Ohio State University</h4>
+                        <h5>B.S. Computer Science & Engineering with a Minor in Game Studies | GPA: 3.8</h5>
+                        <h5>August 2023 - May 2027</h5>
+                    </div>
+                    <div id="osu-logo" class="col-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDU1Oset2z_3jiGU_HCoFk5_4BZC72FenpUqh64TrQYw&s=10" alt="ohio state logo">
+                    </div>
+                </div>
+                
             </section>
              <section id="experience">
                 <h2>Work Experience</h2>
-                <br>
-                <!--perhaps find a way to separate more experiences through some logic, so each experience appears separate and also can be mapped easily when introducing styling-->
-                <h4>Front End Web Development Intern @ Bath & Body Works</h4>
-                <h5>Summer 2026 - present</h5>
-                <!--Intro of Exp-->
-                <p> 
-                    During my internship at Bath \& Body Works, I joined the Customer Team as a Front-End Web Development intern,
-                    contributing to the redesign and development of customer-facing features for the company's e-commerce website.
-                </p>
-                <!--Bullet Points about Exp-->
-                <ul>
-                    <li>Implemented front-end updates for the Love It List, including redesigned buttons and supporting UI components.</li>
-                    <li>Updated the Sign In Modal/Form as part of the website relaunch.</li>
-                    <li>Implemented typography, color, spacing, and other design updates across the Account Dashboard.</li>
-                    <li>Worked with cross-functional teams including QA, UX, Product, and Engineering to refine and review development tickets.</li>
-                    <li>Merged and deployed changes across development and integration branches for testing and review.</li>
-                    <li>Assisted with bug investigation and refinement after identifying a promotional banner rendering issue caused by a width constraint.</li>
-                    <li>Successfully merged multiple tickets into the development environment, contributing to the website relaunch.</li>
-                </ul>
-                <!--Summary-->
-                <p>
-                    This experience gave me hands-on exposure to professional front-end development, collaborative software engineering
-                    workflows, and the process of taking a feature from ticket refinement through implementation, review, testing, and deployment.
-                </p>
+                <div id="experience-list">
+                    <div class="row">
+                        <div class="col-5">
+                            <div id="list-image">
+                                <img src="https://images.seeklogo.com/logo-png/50/1/bath-body-works-logo-png_seeklogo-508832.png" alt="bath and body works logo">
+                            </div>
+                            <div id="list-name-time">
+                                <h4>Front End Web Development Intern @ Bath & Body Works</h4>
+                                <h5>Summer 2026 - present</h5>
+                            </div>
+                        </div>
+                        <div class="col-7" id="exp-accomplishments">
+                            <ul>
+                                <li>Implemented front-end updates for the Love It List, including redesigned buttons and supporting UI components.</li>
+                                <li>Updated the Sign In Modal/Form as part of the website relaunch.</li>
+                                <li>Implemented typography, color, spacing, and other design updates across the Account Dashboard.</li>
+                                <li>Worked with cross-functional teams including QA, UX, Product, and Engineering to refine and review development tickets.</li>
+                                <li>Merged and deployed changes across development and integration branches for testing and review.</li>
+                                <li>Assisted with bug investigation and refinement after identifying a promotional banner rendering issue caused by a width constraint.</li>
+                                <li>Successfully merged multiple tickets into the development environment, contributing to the website relaunch.</li>
+                            </ul>     
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
-                <br>
-                <h4>GlucoTrack Enterprise Platform</h4>
-                <h5>Fall 2025</h5>
-                <!--Intro of Exp-->
-                <p> 
-                    During my fall semester, 3rd year, I had the exciting opportunity to travel to Pittsburgh for the first time for the SteelHacks Hackathon.
-                    As a team of 4, we conducted user interviews with a mother who had to navigate life with a daughter who was diagnosed with Type-1 Diabetes. 
-                    Using this as our motivation, we created features including a meal tracker, personal AI agent to assist with non-medical inquiries, and a data-tracking page
-                    that syncs with a user's CGM device; and then, allows the user to view their blood-glucose trends visually.
-                </p>
-                <!--Bullet Points about Exp-->
-                <ul>
-                    <li>Developed a functional health application prototype at SteelHacks, with data-entry logs, and a meal tracker.</li>
-                    <li>
-                        Orchestrated an intelligent AI agent for the prototype using LangChain and the Gemini API, implementing
-                        RAG to answer non-medical user inquiries.
-                    </li>
-                    <li> Scaled the hackathon concept into a technical proposal, system design, and HIPAA-compliant data constraints.</li>
-                    <li>
-                        Designed specifications for an interoperability middleware layer (GlucoBridge) to normalize
-                        gathering data from CGM devices.
-                    </li>
-                </ul>
-                <!--Summary-->
-                <p>
-                    This experience taught me the importance of conducting user interviews with real-possible users
-                    of an application that I want to develop. Seperating features into different pages, and team mates
-                    is a tactic to allow for rapid development which was necessary in real-life engineering scenarios. Ultimately,
-                    I learned that impact which technology can have on improving the medical lives of people and hope to continue 
-                    learn the safegaurds & research which truly allow software applications to improve lives.
-                </p>
+                <div id="projects-list">
+                    <div class="row">
+                        <div class="col-5">
+                            <div id="list-image"></div>
+                            <div id="list-name-time">
+                                <h4>GlucoTrack Enterprise Platform</h4>
+                                <h5>Fall 2025</h5>
+                            </div>
+                        </div>
+                        <div class="col-7" id="list-accomplishments">
+                            <ul>
+                                <li>Developed a functional health application prototype at SteelHacks, with data-entry logs, and a meal tracker.</li>
+                                <li>
+                                    Orchestrated an intelligent AI agent for the prototype using LangChain and the Gemini API, implementing
+                                    RAG to answer non-medical user inquiries.
+                                </li>
+                                <li> Scaled the hackathon concept into a technical proposal, system design, and HIPAA-compliant data constraints.</li>
+                                <li>
+                                    Designed specifications for an interoperability middleware layer (GlucoBridge) to normalize
+                                    gathering data from CGM devices.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="text-center">
             <h2 class="d-flex justify-content-center py-3">Connect With Me!</h2>
             <div class="d-flex justify-content-center gap-3 pb-3">
-                <!--used AI to fix my button styling, I originally had buttons with an "a" tag inside, but that led to issues -->
-                <!--learned that a "a" tag inside a button is not valid HTML, so I used an a tag with the bootstrap btn class -->
                 <a href="https://github.com/Meliboy" target="_blank" class="btn btn-outline-dark btn-lg">Github</a>
                 <a href="https://www.linkedin.com/in/melvinjvasquez/" target="_blank" class="btn btn-outline-dark btn-lg">LinkedIn</a>
                 <a href="mailto:melvin.60834@gmail.com" target="_blank" class="btn btn-outline-dark btn-lg">Email</a>

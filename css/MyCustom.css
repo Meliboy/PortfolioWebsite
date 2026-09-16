@@ -1,42 +1,304 @@
 @charset "utf-8";
 
-/* CSS Document */
-/*      
-use style tag within a head element of html to add inline css    
-   			Page Level
-            * {}
-            Tag Level
-            h2 {}
-            h1, h2 {}
-            Class level
-            .column {} 
-*/
+:root {
+	--space-xs: 8px;
+	--space-sm: 16px;
+	--space-md: 24px;
+	--space-lg: 40px;
+	--space-xl: 64px;
+
+	/* ---- LoL-inspired palette ---- */
+	--color-navy: #0a1428;       /* deep background navy */
+	--color-navy-dark: #060d1a;  /* deeper navy for nav/footer contrast */
+	--color-navy-light: #0f2540; /* lighter navy for panels */
+	--color-gold: #ac8b48;       /* muted gold, primary accent */
+	--color-gold-bright: #be984d;/* pale gold/cream for text on dark */
+	--color-teal: #0ac8b9;       /* LoL teal, used sparingly */
+	--color-text: #1e1e1e;       /* body text on light background */
+	--color-text-muted: #555;
+}
+
 body {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-}
-
-img {
-	border-radius: 50%;
-}
-
-#introduction h1, h3 {
-	font-style: italic;
-}
-
-@media (min-width: 768px) {
-  	#introduction-text {
-	padding-left: 10rem;
-	}
-	
-}
-
-#introduction {
-	margin: 16px;
+	padding: var(--space-md);
+	padding-top: 0;
+	color: var(--color-text);
+	background-color: #fafafa;
 }
 
 html {
 	scroll-behavior: smooth;
 	max-width: 1280px;
+	min-width: 300px;
 	margin: 0 auto;
 }
 
+/* ---- Nav: dark navy bar with gold text, like a champion select header ---- */
+nav {
+	padding: var(--space-sm) var(--space-md) !important;
+	margin: 0 0 var(--space-md) 0;
+	background-color: var(--color-navy-dark) !important;
+	border-bottom: 2px solid var(--color-gold);
+}
+
+.navbar-brand {
+	color: var(--color-gold-bright) !important;
+	font-weight: bold;
+	font-size: 1.25rem;
+	letter-spacing: 0.5px;
+}
+
+.nav-link {
+	color: var(--color-gold) !important;
+	transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+	color: var(--color-teal) !important;
+}
+
+.navbar-toggler {
+	border-color: var(--color-gold) !important;
+}
+
+.navbar-toggler-icon {
+	filter: invert(75%) sepia(20%) saturate(400%) hue-rotate(0deg);
+}
+
+/* ---- Section rhythm ---- */
+section {
+	padding-top: var(--space-xl);
+	padding-bottom: var(--space-lg);
+	border-bottom: 1px solid #e0d9c8;
+}
+
+section:last-of-type {
+	border-bottom: none;
+}
+
+section h2 {
+	margin-bottom: var(--space-md);
+	color: var(--color-navy);
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	padding-bottom: var(--space-xs);
+}
+
+/* gold underline accent beneath each section heading */
+section h2::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(90deg, var(--color-gold), var(--color-teal));
+}
+
+/* ---- About / Introduction ---- */
+#introduction {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--space-lg);
+	width: fit-content;
+	margin: 0 auto var(--space-md);
+}
+
+#introduction h1,
+h3 {
+	font-style: italic;
+}
+
+#introduction h1 {
+	color: var(--color-navy);
+}
+
+#introduction-text h3 {
+	margin-top: var(--space-xs);
+	color: var(--color-text-muted);
+}
+
+#introduction img {
+	border-radius: 50%;
+	width: 300px;
+	height: auto;
+	display: block;
+	border: 4px solid var(--color-gold);
+	box-shadow: 0 0 16px rgba(10, 200, 185, 0.25);
+}
+
+#about p {
+	margin-top: var(--space-md);
+	line-height: 1.6;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ---- Skills ---- */
+#tech-stack {
+	gap: var(--space-sm);
+}
+
+#tech-stack .column {
+	flex: 1;
+	text-align: center;
+	padding: var(--space-sm) var(--space-xs);
+	border-radius: 4px;
+	background-color: var(--color-navy-light);
+	border-top: 3px solid var(--color-gold);
+}
+
+#tech-stack .column h4 {
+	margin-bottom: var(--space-xs);
+	color: var(--color-gold-bright);
+}
+
+.list-skills {
+	list-style: none;
+	padding: 0;
+}
+
+.list-skills li {
+	padding: 4px 0;
+	color: #d6dce5;
+}
+
+/* ---- Education ---- */
+#educ-box {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-md);
+}
+
+#degree-info {
+	flex: 1;
+}
+
+#degree-info h4 {
+	color: var(--color-navy);
+}
+
+#degree-info h5 {
+	margin-top: var(--space-xs);
+	font-weight: normal;
+	color: var(--color-text-muted);
+}
+
+#osu-logo {
+	flex: 0 0 auto;
+	text-align: center;
+}
+
+#educ-box img {
+	width: 200px;
+	height: auto;
+	display: block;
+	border-radius: 50%;
+	border: 3px solid var(--color-gold);
+}
+
+/* ---- Experience & Projects (shared structure) ---- */
+#experience-list .row,
+#projects-list .row {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	gap: var(--space-md);
+	margin-bottom: var(--space-lg);
+}
+
+#experience-list .row:last-child,
+#projects-list .row:last-child {
+	margin-bottom: 0;
+}
+
+/* left column: image + name/time */
+#experience-list .col-4,
+#projects-list .col-4 {
+	flex: 0 0 220px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* right column: bullet list */
+#experience-list .col-8,
+#projects-list .col-8 {
+	flex: 1;
+	min-width: 0;
+}
+
+#list-image {
+	width: 200px;
+	margin-bottom: var(--space-sm);
+	border: 3px solid var(--color-gold);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+#list-image img {
+	width: 200px;
+	height: auto;
+	display: block;
+}
+
+#list-name-time h4 {
+	margin-bottom: 4px;
+	color: var(--color-navy);
+}
+
+#list-name-time h5 {
+	font-weight: normal;
+	color: var(--color-teal);
+}
+
+#exp-accomplishments ul,
+#list-accomplishments ul {
+	padding-left: var(--space-md);
+	margin: 0;
+}
+
+#exp-accomplishments li,
+#list-accomplishments li {
+	padding-bottom: var(--space-xs);
+	line-height: 1.5;
+}
+
+#exp-accomplishments li::marker,
+#list-accomplishments li::marker {
+	color: var(--color-gold);
+}
+
+/* ---- Footer: dark navy footer, mirrors nav ---- */
+footer {
+	padding-top: var(--space-lg);
+	padding-bottom: var(--space-md);
+	margin-top: var(--space-lg);
+	background-color: var(--color-navy-dark);
+	border-top: 2px solid var(--color-gold);
+}
+
+footer h2 {
+	margin-bottom: var(--space-sm);
+	color: var(--color-gold-bright);
+}
+
+footer h2::after {
+	display: none;
+}
+
+.btn-outline-dark {
+	color: var(--color-gold) !important;
+	border-color: var(--color-gold) !important;
+	background-color: transparent !important;
+}
+
+.btn-outline-dark:hover {
+	color: var(--color-navy) !important;
+	background-color: var(--color-gold) !important;
+	border-color: var(--color-gold) !important;
+}
