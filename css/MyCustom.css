@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 :root {
+	--space-xxs: 4px;
 	--space-xs: 8px;
 	--space-sm: 16px;
 	--space-md: 24px;
@@ -13,7 +14,6 @@
 	--color-navy-light: #0f2540; /* lighter navy for panels */
 	--color-gold: #ac8b48;       /* muted gold, primary accent */
 	--color-gold-bright: #be984d;/* pale gold/cream for text on dark */
-	--color-teal: #0ac8b9;       /* LoL teal, used sparingly */
 	--color-text: #1e1e1e;       /* body text on light background */
 	--color-text-muted: #555;
 }
@@ -37,7 +37,7 @@ html {
 nav {
 	padding: var(--space-sm) var(--space-md) !important;
 	margin: 0 0 var(--space-md) 0;
-	background-color: var(--color-navy-dark) !important;
+	background-color: var(--color-navy-light) !important;
 	border-bottom: 2px solid var(--color-gold);
 }
 
@@ -54,7 +54,7 @@ nav {
 }
 
 .nav-link:hover {
-	color: var(--color-teal) !important;
+	color: var(--color-text-muted) !important;
 }
 
 .navbar-toggler {
@@ -83,17 +83,6 @@ section h2 {
 	position: relative;
 	display: inline-block;
 	padding-bottom: var(--space-xs);
-}
-
-/* gold underline accent beneath each section heading */
-section h2::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 60px;
-	height: 3px;
-	background: linear-gradient(90deg, var(--color-gold), var(--color-teal));
 }
 
 /* ---- About / Introduction ---- */
@@ -142,16 +131,15 @@ h3 {
 	gap: var(--space-sm);
 }
 
-#tech-stack .column {
+#tech-stack .col-3 {
 	flex: 1;
+	margin: 0 auto;
 	text-align: center;
-	padding: var(--space-sm) var(--space-xs);
-	border-radius: 4px;
 	background-color: var(--color-navy-light);
 	border-top: 3px solid var(--color-gold);
 }
 
-#tech-stack .column h4 {
+#tech-stack .col-3 h4 {
 	margin-bottom: var(--space-xs);
 	color: var(--color-gold-bright);
 }
@@ -197,9 +185,10 @@ h3 {
 #educ-box img {
 	width: 200px;
 	height: auto;
-	display: block;
+	display: inline-flex;
 	border-radius: 50%;
 	border: 3px solid var(--color-gold);
+	align-self: center;
 }
 
 /* ---- Experience & Projects (shared structure) ---- */
@@ -253,13 +242,13 @@ h3 {
 
 #list-name-time h5 {
 	font-weight: normal;
-	color: var(--color-teal);
+	color: var(--color-text-muted);
 }
 
 #exp-accomplishments ul,
 #list-accomplishments ul {
 	padding-left: var(--space-md);
-	margin: 0;
+	margin: auto;
 }
 
 #exp-accomplishments li,
@@ -278,7 +267,7 @@ footer {
 	padding-top: var(--space-lg);
 	padding-bottom: var(--space-md);
 	margin-top: var(--space-lg);
-	background-color: var(--color-navy-dark);
+	background-color: var(--color-navy-light);
 	border-top: 2px solid var(--color-gold);
 }
 

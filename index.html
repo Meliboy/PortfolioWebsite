@@ -17,7 +17,7 @@
         <!-- Visible content goes here -->
         <header>
             <!--navbar component from bootstrap, reworked example code I found in the docs to fit my needs-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="index.html">My Portfolio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation bar">
                     <span class="navbar-toggler-icon"></span>
@@ -77,7 +77,7 @@
                 <h2>Technical Skills</h2>
                 <!--utilized list to showcase my tech stack-->
                 <div id="tech-stack" class="row">
-                    <div class="column">
+                    <div class="col-3">
                         <h4>Languages</h4>
                         <ul class="list-skills">
                             <li>HTML</li>
@@ -90,7 +90,7 @@
                             <li>C#</li>
                         </ul>
                     </div>
-                    <div class="column">
+                    <div class="col-3">
                         <h4>Frameworks & Libraries</h4>
                         <ul class="list-skills">
                             <li>React</li>
@@ -101,7 +101,7 @@
                             <li>Chakra UI</li>
                         </ul>
                     </div>
-                    <div class="column">
+                    <div class="col-3">
                         <h4>Testing & Software</h4>
                         <ul class="list-skills">
                             <li>Jest</li>
@@ -112,7 +112,7 @@
                             <li>Notion</li>
                         </ul>
                     </div>
-                    <div class="column">
+                    <div class="col-3">
                         <h4>Development</h4>
                         <ul class="list-skills">
                             <li>Git</li>
@@ -144,16 +144,17 @@
                 <h2>Work Experience</h2>
                 <div id="experience-list">
                     <div class="row">
-                        <div class="col-5">
+                        <div class="col-4">
                             <div id="list-image">
                                 <img src="https://images.seeklogo.com/logo-png/50/1/bath-body-works-logo-png_seeklogo-508832.png" alt="bath and body works logo">
                             </div>
                             <div id="list-name-time">
                                 <h4>Front End Web Development Intern @ Bath & Body Works</h4>
+                                <h5>Columbus, Ohio</h5>
                                 <h5>Summer 2026 - present</h5>
                             </div>
                         </div>
-                        <div class="col-7" id="exp-accomplishments">
+                        <div class="col-8" id="list-accomplishments">
                             <ul>
                                 <li>Implemented front-end updates for the Love It List, including redesigned buttons and supporting UI components.</li>
                                 <li>Updated the Sign In Modal/Form as part of the website relaunch.</li>
@@ -164,21 +165,64 @@
                                 <li>Successfully merged multiple tickets into the development environment, contributing to the website relaunch.</li>
                             </ul>     
                         </div>
+                     </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div id="list-image">
+                                <img src="https://images.seeklogo.com/logo-png/50/1/bath-body-works-logo-png_seeklogo-508832.png" alt="bath and body works logo">
+                            </div>
+                            <div id="list-name-time">
+                                <h4>CSE 3901 Teaching Assistant @ The Ohio State University</h4>
+                                <h5>February 2026 - present</h5>
+                            </div>
+                        </div>
+                        <div class="col-8" id="list-accomplishments">
+                            <ul>
+                                <li>Evaluated project submissions and code quality for 90+ students, providing detailed technical feedback on full-stack
+                                    web applications built with modern web technologies including Ruby on Rails, JavaScript, HTML, and CSS.
+                                </li>
+                                <li>
+                                    Held weekly office hours to mentor students on SWE practices, debugging strategies, and Git version control.
+                                </li>
+                            </ul>     
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div id="list-image">
+                                <img src="https://images.seeklogo.com/logo-png/50/1/bath-body-works-logo-png_seeklogo-508832.png" alt="bath and body works logo">
+                            </div>
+                            <div id="list-name-time">
+                                <h4>Front End Web Development Intern @ Bath & Body Works</h4>
+                                <h5>Summer 2026 - present</h5>
+                            </div>
+                        </div>
+                        <div class="col-8" id="list-accomplishments">
+                            <ul>
+                                <li>Implemented front-end updates for the Love It List, including redesigned buttons and supporting UI components.</li>
+                                <li>Updated the Sign In Modal/Form as part of the website relaunch.</li>
+                                <li>Implemented typography, color, spacing, and other design updates across the Account Dashboard.</li>
+                                <li>Worked with cross-functional teams including QA, UX, Product, and Engineering to refine and review development tickets.</li>
+                                <li>Merged and deployed changes across development and integration branches for testing and review.</li>
+                                <li>Assisted with bug investigation and refinement after identifying a promotional banner rendering issue caused by a width constraint.</li>
+                                <li>Successfully merged multiple tickets into the development environment, contributing to the website relaunch.</li>
+                            </ul>     
+                        </div>
+                    </div>                   
                 </div>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
                 <div id="projects-list">
                     <div class="row">
-                        <div class="col-5">
+                        <div class="col-4">
                             <div id="list-image"></div>
                             <div id="list-name-time">
                                 <h4>GlucoTrack Enterprise Platform</h4>
                                 <h5>Fall 2025</h5>
                             </div>
                         </div>
-                        <div class="col-7" id="list-accomplishments">
+                        <div class="col-8" id="list-accomplishments">
                             <ul>
                                 <li>Developed a functional health application prototype at SteelHacks, with data-entry logs, and a meal tracker.</li>
                                 <li>
